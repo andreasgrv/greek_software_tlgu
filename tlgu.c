@@ -505,7 +505,7 @@ int tlgu(char *input_file, char *output_file)
 				printf("\ntlgu output filename too long - exiting\n");
 				return(1);
 			}
-			outfile = open(new_file, O_WRONLY | O_CREAT | O_TRUNC);
+			outfile = open(new_file, O_WRONLY | O_CREAT | O_TRUNC, 0644);
 		}
 		if (outfile < 0) {
 			perror("\ntlgu output file create");
@@ -572,7 +572,7 @@ int tlgu(char *input_file, char *output_file)
 				if (filestat.st_size == 0) unlink(new_file);
 
 				sprintf(new_file, "%s-%s.txt", output_file, previous_bcit[1]);
-				outfile = open(new_file, O_WRONLY | O_CREAT | O_TRUNC);
+				outfile = open(new_file, O_WRONLY | O_CREAT | O_TRUNC, 0644);
 				if (outfile < 0) {
 					perror("\ntlgu: new_file create");
 					close(infile);
