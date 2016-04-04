@@ -1,3 +1,5 @@
+#ifndef TLGCODES_H
+#define TLGCODES_H
 /* tlgcodes.h
  *
  * This is part of the tlgu utility
@@ -318,3 +320,4 @@ unsigned int non_text_close_symbol[] = {
 	0x007d, 0x007d, 0x007d, 0x007d, 0x007d, 0x007d, 0x007d, 0x007d, 0x007d, 0x007d,
 	0x007d, 0x007d,
 	};
+#endif /* ifndef TLGCODES_H */
